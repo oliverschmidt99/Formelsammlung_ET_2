@@ -1,0 +1,76 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[ a4paper,left = 22mm, right=22mm,
+	top=1.3cm, bottom=2cm,
+	includehead, includefoot,
+	headheight=3 cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage{calc}
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{lastpage}
+\usepackage{sectsty}
+\usepackage{multirow}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{titletoc}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{blindtext}
+
+
+\usepackage[most]{tcolorbox}
+
+
+
+
+\PackageWarningNoLine{multirow}{warning text}
+
+
+\allsectionsfont{\sffamily}
+\usepackage{eso-pic}
+\newcommand\BackgroundWave{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{\vfill \centering \vspace{12.0cm}
+			\includegraphics[width=\paperwidth]{logo/hsel-welle-grey}\vfill }}}%%
+\begin{document}
+\AddToShipoutPicture{\BackgroundWave}
+\include{source/9_title}
+\newpage
+\pagestyle{fancy}
+\fancyhead[L]{{\includegraphics[width = 6.0cm]{img/Technik.png}}}
+\fancyhead[R]{
+	\Large{{
+				Formelsammlung\\
+				}}}
+\fancyfoot[L]{\rightmark}
+\fancyfoot[R]{Seite \thepage\ von \pageref{LastPage}}
+\fancyfoot[C]{}
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\newpage
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\newpage
+\ClearShipoutPicture
+
+\pagenumbering{arabic}
+\include{source/energietechnik}
+\include{source/elektrische_maschinen}
+
+\end{document}

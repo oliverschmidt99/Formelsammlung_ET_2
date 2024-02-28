@@ -1,0 +1,2 @@
+Der Sinusverlauf, muss über den min Bereich sein, sodass ein AC-Signal gemessen werden kann.
+Wenn die Amlitude klein ist, wird nur ein gleichbleibender AC-Signal ausgewertete, in den Analog-Digitalwandler.
